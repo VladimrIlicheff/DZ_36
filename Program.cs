@@ -12,7 +12,7 @@ int[] RandomArray()
     Random rnd = new Random();
 
     for (int i = 0; i < num; i++)
-        array[i] = rnd.Next(1,50);
+        array[i] = rnd.Next(1,10);
 
     return array;
 }
@@ -30,16 +30,16 @@ int SumOdd(int[] array)
 {
     int sum = 0;
     for (int i = 0; i < num; i++)
-        if (array[i] % 2 != 0)
+        if (i % 2 == 0)
             sum=sum+array[i];
     return sum;
 }
-//считаем сумму нечётных чисел
+//считаем сумму 
 
 int[] array = RandomArray();
 PrintArray(array);
 Console.WriteLine("");
 int sum = SumOdd(array);
-Console.WriteLine($"сумма нечетных чисел в массиве --->>> {sum}");
+Console.WriteLine($"сумма чисел c нечетным индексом в массиве --->>> {sum}");
 
 
